@@ -1,0 +1,87 @@
+{{ $tabclasses := "block bg-skyblue text-white uppercase p-6 hover:bg-irsred cursor-pointer mb-1" }}
+
+
+<div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'step-one' }" id="tab_wrapper" class="bg-gray-100  p-5 my-10">
+    <div class="flex flex-wrap -mb-4">
+
+        <div class="w-1/3 mb-4 bg-gray-50">
+            <nav>
+            <a :class="{ 'active': tab === 'step1' }" @click.prevent="tab = 'step-one'; window.location.hash = 'step-one'" href="#" class="{{ $tabclasses }}">What To Expect</a>
+            <a :class="{ 'active': tab === 'step-two' }" @click.prevent="tab = 'step-two'; window.location.hash = 'step-two'" href="#" class="{{ $tabclasses }}">Things To Know</a>
+            <a :class="{ 'active': tab === 'step-three' }" @click.prevent="tab = 'step-three'; window.location.hash = 'step-three'" href="#" class="{{ $tabclasses }}">The Do's</a>
+            <a :class="{ 'active': tab === 'step-four' }" @click.prevent="tab = 'step-four'; window.location.hash = 'step-four'" href="#" class="{{ $tabclasses }}">The Dont's</a>
+            </nav>
+        </div>
+    
+        <div class="w-2/3 mb-4 bg-white py-8 px-12">
+
+            <div x-show="tab === 'step-one'">
+                <h2 class="text-2xl py-5">What to Expect In An IRS Audit</h2>
+
+                <p>You are not the first to face an IRS Audit. Through the collection of thousands of experiences, The Center for IRS Help has identified the process IRS agents will use to investigate your tax situation.</p>
+
+                <ul class="py-5 list-disc">
+                    <li>IRS will probably want to interview you</li>
+                    <li>IRS can audit as many or as few items on your return as they choose</li>
+                    <li>IRS can expand the audit to other years and returns not initially under audit</li>
+                    <li>You have the burden to prove each item on your return IRS chooses to audit</li>
+                    <li>IRS may request voluminous documents from you</li>
+                    <li>IRS will ask for your tax returns for the year before and year after the audit year</li>
+                    <li>IRS may summons bank account and other records from third parties</li>
+                    <li>IRS may summons you to testify, produce documents or both</li>
+                    <li>The audit may take months or longer to complete</li>
+                    <li>IRS may interview third parties to gather evidence</li>
+                    <li>IRS may ask you to extend the statute of limitations</li>
+                    <li>If auditing a business, IRS may want to do a site visit to your business</li>
+                    <li>IRS may not accept the information / documents you provide</li>
+                    <li>You may have to take your case to IRS Appeals or Tax Court to resolve audit issues.</li>
+                </ul>
+
+
+            </div>
+
+            <div x-show="tab === 'step-two'">
+                <h2 class="text-2xl py-5">Things To Know</h2>
+                <ul class="list-disc">
+                    <li>IRS does not have to prove an item on your tax return is incorrect. It is your burden to prove the correctness of every item being audited.</li>
+                    <li>IRS may expand the audit to other years and to entities flowing into your tax return, such as S Corporations, LLCs, and Partnerships.</li>
+                    <li>Learn what IRS may view as a Badge of Fraud.</li>
+                    <li>You have no obligation to create documents the IRS requests if you do not already have them.</li>
+                    <li>Think very carefully before hiring your tax return preparer to represent you in your audit–they may be focused on protecting themselves and defending their work in preparing your tax return instead of putting you first. Few return preparers truly have the skill set to handle a difficult audit or difficult IRS agent.</li>
+                    <li>If you decide to hire someone to represent you, hire a real professional who specializes in tax controversy practice.</li>
+                    <li>It may be unwise to extend the statute of limitations for the IRS. Most of the time it serves only to help IRS, not you.</li>
+                    <li>You have rights. Click here to learn more.</li>
+                    <li>If you hire a professional, you should not communicate directly with the IRS or be interviewed by them.</li>
+                    <li>Mistakes or admissions made during the audit may be painfully irreversible, if you need to take your case beyond the audit, to IRS Appeals or Tax Court.</li>
+                    </ul>
+            </div>
+
+
+            <div x-show="tab === 'step-three'">
+                <h2 class="text-2xl py-5">Get Prepared For The Audit: The Dont's</h2>
+                                
+                <p>Not knowing what the IRS can do to you, or take from you, when you have an unpaid tax debt, can lead to sleepless nights. At the Center For IRS Help, we focus on giving you, the taxpayer, straight information to remove the unknown. Try the Smarter Way, follow these steps and sort things out for yourself. If you decide you need help, contact us. We are here to help.</p>
+
+                <ul class="py-5 list-disc">
+                    <li>Do not go to the audit unprepared, or not knowing what IRS may find.</li>
+                    <li>Do not try to snow the examining IRS agent by fabricating documents or being dishonest. Intentionally making a false statement to the IRS is a Federal Crime.</li>
+                    <li>If you need more time to prepare, ask to reschedule the audit. When rescheduling, give yourself plenty of time to get and analyze what you need. Repeatedly rescheduling an audit may be viewed as a badge of fraud.</li>
+                    <li>Do not forget that what you say, and the documents you provide and do not provide during the audit, is creating a record. Mistakes and admissions you make cannot be undone later, if your case goes to IRS Appeals or Tax Court.</li>
+                    <li>Do not assume your (or any) CPA is the best person to represent you in an audit. Tax controversy work is very different from the work of preparing tax returns, and you will want to hire a real professional who specializes in tax controversy practice – not necessarily a return preparer.</li>
+                    <li>Do not hire a CPA to represent you if you have serious issues on your tax return. If you ever truly need to have privileged communications, what you tell a CPA will not be protected as a privileged communication.</li>
+                    <li>Do not wait too long to get help, if you have concerns. Blunders might be irreversible and the bell cannot be unwrung.</li>
+                    <li>If you hire a professional to represent you in your audit, they should not let you be interviewed by IRS–that is one reason you hired them.</li>
+                </ul>
+
+
+            </div>
+
+            <div x-show="tab === 'step-four'">
+             Step Four
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="bg-gray-100">
+    <div class="max-w-screen-xl mx-auto">
+
+      <div class="grid grid-cols-2 xl:grid-cols-6 border-l border-gray-200">
+
+        {{ with .Site.Menus.topics }}
+        {{ range . }}
+        {{ $active := eq $.RelPermalink (.URL | relLangURL) }}
+        <a href="{{ .URL | relLangURL }}"
+        {{ if $active }} class="bg-skyblue text-white text-center uppercase py-5 border-r border-gray-200 hover:bg-irsred hover:text-white border-b xl:border-b-0" aria-current="true"
+        {{ else }} class="text-center uppercase py-5 border-r border-gray-200 hover:bg-irsred hover:text-white border-b xl:border-b-0"
+        {{ end }}
+        >{{ .Name }}</a>
+        {{ end }}
+        {{ end }}
+
+
+
+      </div>
+        </div>
+  </div>

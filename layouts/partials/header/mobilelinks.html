@@ -1,0 +1,11 @@
+<a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-oute">Home</a>
+{{ with .Site.Menus.utility }}
+{{ range after 1 . }}
+{{ $active := eq $.RelPermalink (.URL | relLangURL) }}
+  <a href="{{ .URL | relLangURL }}"
+  {{ if $active }} class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" aria-current="true"
+  {{ else }} class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+  {{ end }}
+  >{{ .Name }}</a>
+{{ end }}
+{{ end }}

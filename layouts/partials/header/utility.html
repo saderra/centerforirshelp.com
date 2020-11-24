@@ -1,0 +1,40 @@
+<nav 
+  x-data="{ isOpen: false }"
+  @keydown.escape="isOpen = false"
+  class="bg-gray-800">
+
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="flex justify-between h-16">
+
+      <div class="flex">
+        <!-- Mobile Menu Button -->
+        <div class="ml-2 mr-2 flex items-center md:hidden">
+          {{ partial "header/mobile" . }}
+        </div>
+
+        <!-- Large Navigation -->
+        <div class="hidden md:flex md:items-center">
+          {{ partial "header/links" . }}
+        </div>
+      </div>
+
+      <!-- Right Text -->
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <a href="/contact"><span class="text-skyblue cta">HELP! I NEED TO TALK NOW!</span></a>   
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Mobile Menu -->
+  <div
+  :class="{ 'block' : isOpen , 'hidden' : !isOpen}"
+  class="md:hidden">
+    <div class="px-2 pt-2 pb-3 sm:px-3 border-t border-gray-700">
+      {{ partial "header/mobilelinks" . }}
+    </div>
+  </div>
+</nav>
