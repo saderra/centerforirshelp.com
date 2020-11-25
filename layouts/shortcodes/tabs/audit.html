@@ -1,6 +1,4 @@
 {{ $tabclasses := "block bg-skyblue text-white uppercase p-6 hover:bg-irsred cursor-pointer mb-1" }}
-
-
 <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'step-one' }" id="tab_wrapper" class="bg-gray-100  p-5 my-10">
     <div class="flex flex-wrap -mb-4">
 
@@ -16,11 +14,11 @@
         <div class="w-2/3 mb-4 bg-white py-8 px-12">
 
             <div x-show="tab === 'step-one'">
-                <h2 class="text-2xl py-5">What to Expect In An IRS Audit</h2>
+                <h2 class="text-3xl pb-5">What to Expect In An IRS Audit</h2>
 
                 <p>You are not the first to face an IRS Audit. Through the collection of thousands of experiences, The Center for IRS Help has identified the process IRS agents will use to investigate your tax situation.</p>
 
-                <ul class="py-5 list-disc">
+                <ul class="py-5 list-disc ml-8">
                     <li>IRS will probably want to interview you</li>
                     <li>IRS can audit as many or as few items on your return as they choose</li>
                     <li>IRS can expand the audit to other years and returns not initially under audit</li>
@@ -41,8 +39,8 @@
             </div>
 
             <div x-show="tab === 'step-two'">
-                <h2 class="text-2xl py-5">Things To Know</h2>
-                <ul class="list-disc">
+                <h2 class="text-3xl pb-5">Things To Know</h2>
+                <ul class="py-5 list-disc ml-8">
                     <li>IRS does not have to prove an item on your tax return is incorrect. It is your burden to prove the correctness of every item being audited.</li>
                     <li>IRS may expand the audit to other years and to entities flowing into your tax return, such as S Corporations, LLCs, and Partnerships.</li>
                     <li>Learn what IRS may view as a Badge of Fraud.</li>
@@ -58,11 +56,32 @@
 
 
             <div x-show="tab === 'step-three'">
-                <h2 class="text-2xl py-5">Get Prepared For The Audit: The Dont's</h2>
+                <h2 class="text-3xl pb-5">Get Prepared For The Audit: The Do's</h2>
+                                
+                <h4 class="pb-4 text-xl">Get Prepared For The Audit: The Do’s</h4>
+                <p class="mb-10">Not knowing what the IRS can do to you, or take from you, when you have an unpaid tax debt, can lead to sleepless nights. At the Center For IRS Help, we focus on giving you, the taxpayer, straight information to remove the unknown. Try the Smarter Way, follow these steps and sort things out for yourself. If you decide you need help, contact us. Remember, you must prove each line item selected for audit on your tax return. IRS rarely audits an entire tax return. Here are some concepts and ideas to prepare for the common issue that arise when others have faced an IRS Audit.</p>
+
+                <h4 class="pb-4 text-xl">You must prove each line item selected for audit on your tax return.</h4>
+                <p class="mb-10">Substantiate your expenses. Organize your documents supporting each audit item into its own group, add up the total from each document and compare that total to the amount claimed on your return - if it is less than the amount you claimed, consider other ways to prove your deduction. Add up the total deposits from each of your 12 months of bank statements from the year under audit, subtract all non-taxable sources – such as loan proceeds, gifts, inheritances, loan repayments and cash you had at the beginning of the year  and compare that total to the amount reported on your tax return. Get help if you have a big difference you cannot explain or do not understand.</p>
+
+                <h4 class="pb-4 text-xl">Prepare to be interviewed by IRS.</h4>
+                <p class="mb-10">While each taxpayers situation is unique, the approaches taken by the IRS to investigate are not. The questions asked are generally predictable which enables you as the consumer to be prepared ahead of time. Be sure to read more on common questions asked by the IRS, including descriptions of what they are looking for in these questions.</p>
+                
+                <h4 class="pb-4 text-xl">Practice What You'll Say</h4>
+                <p class="mb-10">What you say during the audit and the documents you provide during the audit create a record. You do not want to make mistakes or admissions that cannot be undone later, if your case goes to IRS Appeals or Tax Court.</p>
+
+                <h4 class="pb-4 text-xl">Get Additional Help</h4>
+                <p class="mb-10">If you get professional help, be very careful who you select. There are many holding themselves out to handle tax controversies, spending big money on marketing and presenting cleaver tag lines, that lack skill and professionalism.</p>
+
+
+            </div>
+
+            <div x-show="tab === 'step-four'">
+                <h2 class="text-3xl pb-5">Get Prepared For The Audit: The Dont's</h2>
                                 
                 <p>Not knowing what the IRS can do to you, or take from you, when you have an unpaid tax debt, can lead to sleepless nights. At the Center For IRS Help, we focus on giving you, the taxpayer, straight information to remove the unknown. Try the Smarter Way, follow these steps and sort things out for yourself. If you decide you need help, contact us. We are here to help.</p>
 
-                <ul class="py-5 list-disc">
+                <ul class="py-5 list-disc ml-8">
                     <li>Do not go to the audit unprepared, or not knowing what IRS may find.</li>
                     <li>Do not try to snow the examining IRS agent by fabricating documents or being dishonest. Intentionally making a false statement to the IRS is a Federal Crime.</li>
                     <li>If you need more time to prepare, ask to reschedule the audit. When rescheduling, give yourself plenty of time to get and analyze what you need. Repeatedly rescheduling an audit may be viewed as a badge of fraud.</li>
@@ -73,11 +92,6 @@
                     <li>If you hire a professional to represent you in your audit, they should not let you be interviewed by IRS–that is one reason you hired them.</li>
                 </ul>
 
-
-            </div>
-
-            <div x-show="tab === 'step-four'">
-             Step Four
             </div>
 
 
