@@ -1,3 +1,9 @@
+const theme = require('tailwindcss/defaultTheme');
+const twtype = require('@tailwindcss/typography');
+const twforms = require('@tailwindcss/forms');
+const twaspect = require('@tailwindcss/aspect-ratio');
+
+
 const round = (num) => num.toFixed(7).replace(/(\.[0-9]+?)0+$/, '$1').replace(/\.0$/, '');
 const rem = (px) => `${round(px / 16)}rem`;
 const em = (px, base) => `${round(px / base)}em`;
@@ -5,13 +11,6 @@ const px = (px) => `${px}px`;
 
 module.exports = {
 	theme: {
-		aspectRatio: {
-            none: 0,
-            square: [1, 1],
-            "16/9": [16, 9],
-            "4/3": [4, 3],
-            "21/9": [21, 9]
-        },
 		extend: {
 		  colors: {
 			'skyblue': '#55a7ff',
@@ -39,5 +38,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [ ]
+	plugins: [ twtype, twforms, twaspect ]
 };
