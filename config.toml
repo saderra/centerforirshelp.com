@@ -24,3 +24,8 @@ path = "github.com/saderra/hugo-modules/breadcrumbs"
 path = "github.com/saderra/hugo-modules/blogtools"
 
 
+
+[build]
+writeStats = true
+
+
