@@ -2,6 +2,7 @@ const theme = require('tailwindcss/defaultTheme');
 const twtype = require('@tailwindcss/typography');
 const twforms = require('@tailwindcss/forms');
 const twaspect = require('@tailwindcss/aspect-ratio');
+const colors = require('tailwindcss/colors');
 
 
 const round = (num) => num.toFixed(7).replace(/(\.[0-9]+?)0+$/, '$1').replace(/\.0$/, '');
@@ -17,9 +18,11 @@ module.exports = {
 			'irsred': '#c72038',
 			'lgray': '#f2f2f2'
 		  },
+
+
 		  backgroundImage: theme => ({
 				'home-mast': "url('/images/masthead-home.jpg')"
-			})
+		  })
 		}
 	  },
 	important: true, 
@@ -38,5 +41,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [ twtype, twforms, twaspect ]
+	plugins: [ twtype, twforms, twaspect, colors ]
 };

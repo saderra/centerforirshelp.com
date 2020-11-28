@@ -9,3 +9,5 @@ dataset: criminal
 intro: "content here."
 ---
 
+{{< tabs/criminal >}}
+{{< faq/criminal >}}

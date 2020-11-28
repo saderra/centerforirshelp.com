@@ -18,14 +18,14 @@
   "alpinejs": "^2.7.3"
  },
  "devDependencies": {
-  "@tailwindcss/aspect-ratio": "*",
+  "@tailwindcss/aspect-ratio": "^0.2.0",
   "@tailwindcss/forms": "*",
   "@tailwindcss/typography": "*",
-  "autoprefixer": "*",
-  "postcss": "*",
+  "autoprefixer": "^10.0.4",
+  "postcss": "^8.1.10",
   "postcss-cli": "*",
   "postcss-purgecss": "*",
-  "tailwindcss": "*"
+  "tailwindcss": "^2.0.1"
  },
  "name": "centerforirshelp.com",
  "version": "0.1.0"

@@ -9,4 +9,5 @@ dataset: foreign
 intro: "content here"
 ---
 
-Text.
+{{< tabs/foreign >}}
+{{< faq/foreign >}}
