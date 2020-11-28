@@ -2,7 +2,6 @@ const theme = require('tailwindcss/defaultTheme');
 const twtype = require('@tailwindcss/typography');
 const twforms = require('@tailwindcss/forms');
 const twaspect = require('@tailwindcss/aspect-ratio');
-const colors = require('tailwindcss/colors');
 
 
 const round = (num) => num.toFixed(7).replace(/(\.[0-9]+?)0+$/, '$1').replace(/\.0$/, '');
@@ -41,5 +40,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [ twtype, twforms, twaspect, colors ]
+	plugins: [ twtype, twforms, twaspect ]
 };
