@@ -1,8 +1,27 @@
 {{ define "main" }}
-{{ range .Pages }}
 
-    <h2>{{ .Title }}</h2>
-    {{ .Content }}
+<div class="bg-gray-800">
+    <div class="max-w-screen-xl mx-auto py-8">
+      <h1 class="px-4 xl:px-0 text-4xl text-white font-semibold">{{ .Title }}</h1>
+    </div>
+  </div>
+  
 
-{{ end }}
+
+<div class="container mx-auto">
+
+    {{ range .Pages }}
+        <div class="p-8 border my-8">
+        <h3 class="text-lg leading-6 font-medium text-gray-900 pb-6">
+           <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="pt-6 border-t"> {{ .Summary }}</p>
+        <a type="button" href="{{ .Permalink }}" class="inline-flex items-center mt-10 px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-700 hover:bg-gray-400 focus:outline-none transition ease-in-out duration-150">
+          Read More &raquo; 
+        </a>
+
+        </div>
+        {{ end }}
+</div>
+
 {{ end }}
