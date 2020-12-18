@@ -11,6 +11,16 @@ const px = (px) => `${px}px`;
 
 module.exports = {
 	theme: {
+		minHeight: {
+			'0': '0',
+			'450': '450px',
+			'1/2': '50%',
+			'3/4': '75%',
+			'full': '100%',
+		   },
+
+
+
 		extend: {
 		  colors: {
 			'skyblue': '#55a7ff',
